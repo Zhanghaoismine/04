@@ -1,14 +1,15 @@
 #include <stdio.h>
-#include <stdlib.h>
-
-/* run this program using the console pauser or add your own getch, system("pause") or input loop */
-
 int main(int argc, char *argv[]) {
-	int a;
-	printf("input seconds : ");
-	scanf("%i", &a);
-	
-	printf("%i second - %i:%i \n", a, a/60, a%60);
-	
-	return 0;
+    int a;
+    printf("input a year :");
+    scanf("%i", &a);
+
+    if ((a % 4 == 0 && a % 100 != 0) || (a % 400 == 0)) {
+        printf("%i is a leap year.\n", a);
+    } else {
+        printf("%i is not a leap year.\n", a);
+    }
+
+    return 0;
 }
+
